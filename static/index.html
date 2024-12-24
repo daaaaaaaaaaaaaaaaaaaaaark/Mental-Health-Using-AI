@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Support</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mental Health Support</h1>
+            <nav>
+                <button class="nav-btn active" data-section="mood">Mood Tracker</button>
+                <button class="nav-btn" data-section="chat">AI Companion</button>
+                <button class="nav-btn" data-section="inspire">Daily Inspiration</button>
+                <button class="nav-btn" data-section="journal">Journal</button>
+                <button class="nav-btn" data-section="meditation">Meditation</button>
+                <button class="nav-btn" data-section="resources">Resources</button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="mood" class="section active">
+                <h2>How are you feeling today?</h2>
+                <div class="mood-grid">
+                    <button class="mood-btn" data-mood="happy">😊 Happy</button>
+                    <button class="mood-btn" data-mood="calm">😌 Calm</button>
+                    <button class="mood-btn" data-mood="sad">😢 Sad</button>
+                    <button class="mood-btn" data-mood="anxious">😰 Anxious</button>
+                    <button class="mood-btn" data-mood="angry">😠 Angry</button>
+                </div>
+                <textarea id="mood-note" placeholder="Add a note about how you're feeling..."></textarea>
+                <button id="save-mood" class="primary-btn">Save Entry</button>
+                <div id="mood-history"></div>
+            </section>
+
+            <section id="chat" class="section">
+                <h2>AI Companion Chat</h2>
+                <div class="chat-container">
+                    <div id="chat-messages" class="chat-messages"></div>
+                    <div class="chat-input">
+                        <textarea id="chat-input" placeholder="Type your message here..."></textarea>
+                        <button id="send-message" class="primary-btn">Send</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="inspire" class="section">
+                <h2>Daily Inspiration</h2>
+                
+                <div class="inspiration-card">
+                    <h3><i class="fas fa-quote-left"></i> Quote of the Day</h3>
+                    <div id="daily-quote" class="content-box">
+                        <p class="quote-text"></p>
+                        <p class="quote-author"></p>
+                    </div>
+                    <button class="secondary-btn" id="new-quote">New Quote</button>
+                </div>
+
+                <div class="inspiration-card">
+                    <h3><i class="fas fa-music"></i> Recommended Songs</h3>
+                    <div id="song-recommendations" class="content-box">
+                        <div class="song-filters">
+                            <button class="filter-btn active" data-mood="all">All</button>
+                            <button class="filter-btn" data-mood="calm">Calming</button>
+                            <button class="filter-btn" data-mood="upbeat">Upbeat</button>
+                            <button class="filter-btn" data-mood="motivation">Motivational</button>
+                        </div>
+                        <div class="songs-list"></div>
+                    </div>
+                </div>
+
+                <div class="inspiration-card">
+                    <h3><i class="fas fa-book-open"></i> Short Stories</h3>
+                    <div id="story-section" class="content-box">
+                        <div class="story-categories">
+                            <button class="category-btn active" data-category="inspiration">Inspirational</button>
+                            <button class="category-btn" data-category="mindfulness">Mindfulness</button>
+                            <button class="category-btn" data-category="healing">Healing</button>
+                        </div>
+                        <div class="story-content">
+                            <h4 class="story-title"></h4>
+                            <p class="story-text"></p>
+                        </div>
+                        <button class="secondary-btn" id="new-story">Next Story</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="journal" class="section">
+                <h2>Journal</h2>
+                <div class="journal-entry">
+                    <textarea placeholder="Write your thoughts here..."></textarea>
+                    <button class="primary-btn">Save Entry</button>
+                </div>
+            </section>
+
+            <section id="meditation" class="section">
+                <h2>Meditation</h2>
+                <div class="meditation-tools">
+                    <div class="meditation-timer">
+                        <h3>Breathing Exercise</h3>
+                        <div class="breathing-circle"></div>
+                        <button class="primary-btn">Start</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resources" class="section">
+                <h2>Resources</h2>
+                <div class="resources-list">
+                    <div class="resource-card">
+                        <h3>Crisis Helplines</h3>
+                        <p>24/7 support when you need it most</p>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Self-Help Tools</h3>
+                        <p>Techniques and exercises for mental wellness</p>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Community Support</h3>
+                        <p>Connect with others on similar journeys</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
